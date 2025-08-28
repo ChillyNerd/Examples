@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from sqlalchemy.orm import Session, declarative_base
-from alchemy_project.exceptions.session_exception import SessionException
+from exceptions.session_exception import SessionException
 
 
 class AbstractDB(ABC):

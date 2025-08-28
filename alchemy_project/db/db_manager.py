@@ -1,7 +1,7 @@
-from alchemy_project.db.abstract_db import AbstractDB
-from alchemy_project.db.schema.users import UsersSchema
-from alchemy_project.db.schema.base import base
-from alchemy_project.utils.config import Config
+from db.abstract_db import AbstractDB
+from db.schema.users import UsersSchema
+from db.schema.base import base
+from utils.config import Config
 import cx_Oracle
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, Session

@@ -1,6 +1,6 @@
 from typing import List
 
-from requirements_tree.utils.service import Service
+from utils.service import Service
 
 
 class RequirementTree:

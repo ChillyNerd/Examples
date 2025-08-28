@@ -1,8 +1,8 @@
-from alchemy_project.db.schema.base import base
+from db.schema.base import base
 from sqlalchemy.types import Integer, String
 from sqlalchemy import Column
 from typing import List, Type
-from alchemy_project.db.abstract_db import AbstractDB
+from db.abstract_db import AbstractDB
 
 
 class User(base):

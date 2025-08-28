@@ -21,7 +21,7 @@ Python 3.10.3
 
 1. Создаем новый файл в папке schema
 2. Создаем класс по примеру
-<pre><code class="shell">from alchemy_project.db.schema.base import base
+<pre><code class="shell">from db.schema.base import base
 
 class `Имя обьекта таблицы`(base):
     __tablename__ = '`имя таблицы в базе`'
@@ -30,7 +30,7 @@ class `Имя обьекта таблицы`(base):
     ... Описание других колонок
 </code></pre>
 3. Создаем класс схемы работы с таблицей по примеру
-<pre><code class="shell">from alchemy_project.db.abstract_db import AbstractDB
+<pre><code class="shell">from db.abstract_db import AbstractDB
 
 class `Имя обьекта схемы работы с таблицей`:
     def __init__(self, db: AbstractDB):

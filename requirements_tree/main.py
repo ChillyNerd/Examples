@@ -1,5 +1,5 @@
-from requirements_tree.utils.requirement_tree import RequirementTree
-from requirements_tree.utils.service import Service
+from utils.requirement_tree import RequirementTree
+from utils.service import Service
 
 services_json = [{'name': 'discovery', 'required': ['config']}, {'name': 'config', 'required': []}, {'name': 'auth', 'required': ['discovery']}, {'name': 'api-gateway', 'required': ['discovery']}, {"name": "menu", "required": ["api-gateway", "auth"]}]
 services = list(map(lambda parameters: Service(parameters), services_json))
