@@ -5,6 +5,7 @@ services_json = [{'name': 'discovery', 'required': ['config']}, {'name': 'config
 services = list(map(lambda parameters: Service(parameters), services_json))
 tree = RequirementTree()
 tree.parse_requirements(services)
+tree.print(1)
 priority_dict = tree.get_priority_dict()
 services_with_priority = list(map(
     lambda service: Service({'priority': priority_dict[service.name]}).copy_from(service), services
