@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from dash_app.app.abstract_app import AbstractApp
+from app.abstract_app import AbstractApp
 
 
 class BaseComponent(ABC):

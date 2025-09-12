@@ -2,10 +2,10 @@ import dash_bootstrap_components as dbc
 from dash import dcc
 from dash import html, Output, Input
 
-from dash_app.app.abstract_app import AbstractApp
-from dash_app.app.components import BaseComponent
-from dash_app.app.components.first_page.first_page import FirstPage
-from dash_app.app.components.second_page.second_page import SecondPage
+from app.abstract_app import AbstractApp
+from app.components import BaseComponent
+from app.components.first_page.first_page import FirstPage
+from app.components.second_page.second_page import SecondPage
 
 
 class Home(BaseComponent):

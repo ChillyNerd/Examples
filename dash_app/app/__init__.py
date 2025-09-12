@@ -1,1 +1,1 @@
-from dash_app.app.app import ApplicationServer
+from app.app import ApplicationServer

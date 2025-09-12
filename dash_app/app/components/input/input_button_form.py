@@ -3,9 +3,9 @@ from dash import dcc, html, Output, Input, State
 from dash.exceptions import PreventUpdate
 from flask import request
 
-from dash_app.app.abstract_app import AbstractApp
-from dash_app.app.assets.icons import delete_icon
-from dash_app.app.components import BaseComponent
+from app.abstract_app import AbstractApp
+from app.assets.icons import delete_icon
+from app.components import BaseComponent
 
 
 class InputButtonForm(BaseComponent):

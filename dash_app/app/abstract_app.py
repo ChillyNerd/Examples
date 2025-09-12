@@ -3,7 +3,7 @@ from logging import Logger
 
 from dash import Dash
 
-from dash_app.utils.config import Config
+from utils.config import Config
 
 
 class NotImplementedException(Exception):

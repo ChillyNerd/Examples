@@ -1,7 +1,7 @@
 import logging
 
-from dash_app.app import ApplicationServer
-from dash_app.utils.config import Config
+from app import ApplicationServer
+from utils.config import Config
 
 if __name__ == '__main__':
     config = Config()

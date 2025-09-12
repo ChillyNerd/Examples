@@ -4,9 +4,9 @@ import os
 
 from dash import Dash
 
-from dash_app.app.abstract_app import AbstractApp
-from dash_app.app.components import Layout
-from dash_app.utils.config import Config
+from app.abstract_app import AbstractApp
+from app.components import Layout
+from utils.config import Config
 
 
 class ApplicationServer(AbstractApp):

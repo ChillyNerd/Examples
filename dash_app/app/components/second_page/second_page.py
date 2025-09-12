@@ -1,7 +1,7 @@
 from dash import html
 
-from dash_app.app.abstract_app import AbstractApp
-from dash_app.app.components import BaseComponent
+from app.abstract_app import AbstractApp
+from app.components import BaseComponent
 
 
 class SecondPage(BaseComponent):

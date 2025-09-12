@@ -1,9 +1,9 @@
 from dash import html, dcc
 from flask import request
 
-from dash_app.app.abstract_app import AbstractApp
-from dash_app.app.components.base_component import BaseComponent
-from dash_app.app.components.home.home import Home
+from app.abstract_app import AbstractApp
+from app.components.base_component import BaseComponent
+from app.components.home.home import Home
 
 
 class Layout:

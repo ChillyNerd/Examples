@@ -1,9 +1,9 @@
 import dash_split_pane
 from dash import html
 
-from dash_app.app.abstract_app import AbstractApp
-from dash_app.app.components import BaseComponent
-from dash_app.app.components.input.input_button_form import InputButtonForm
+from app.abstract_app import AbstractApp
+from app.components import BaseComponent
+from app.components.input.input_button_form import InputButtonForm
 
 
 class FirstPage(BaseComponent):
