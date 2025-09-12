@@ -10,16 +10,20 @@ import yaml
 
 class Config:
     host: str = socket.gethostname()
-    port: int
+    port: int = 80
     logging_level: str = "DEBUG"
 
     def __init__(self, config_path: str = os.path.join(os.getcwd(), 'config.yaml')):
-        self.path = config_path
-        with open(self.path, encoding='utf-8') as file:
-            config_file = yaml.load(file, Loader=yaml.FullLoader)
-            self.set_config_parameter('host', config_file, str, 'app', 'host')
-            self.set_config_parameter('port', config_file, int, 'app', 'port')
-            self.set_config_parameter('logging_level', config_file, str, 'log', 'level')
+        if os.path.exists(config_path):
+            with open(config_path, encoding='utf-8') as file:
+                config_file = yaml.load(file, Loader=yaml.FullLoader)
+                self.set_config_parameter('host', config_file, str, 'app', 'host')
+                self.set_config_parameter('port', config_file, int, 'app', 'port')
+                self.set_config_parameter('logging_level', config_file, str, 'log', 'level')
+        else:
+            default_config = {'log': {'level': "INFO"}}
+            with open(config_path, mode='w') as file:
+                yaml.dump(default_config, file)
         self.config_logging()
 
     def config_logging(self):

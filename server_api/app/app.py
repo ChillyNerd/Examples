@@ -3,7 +3,7 @@ import logging
 from fastapi import FastAPI
 
 from app.abstract_app import AbstractApp
-from app.routes import *
+import app.routes as routes
 from utils.config import Config
 
 
@@ -17,9 +17,11 @@ class ApplicationServer(AbstractApp):
         self.reset_services()
 
     def init_routes(self):
-        init_utils_routes(self)
-        init_start_routes(self)
-        init_stop_routes(self)
+        initable_routes = list(filter(lambda attr: attr.startswith('init'), dir(routes)))
+        for route_name in initable_routes:
+            init_route = getattr(routes, route_name)
+            if init_route is not None:
+                init_route(self)
 
     def reset_services(self):
         self.log.info("Services reset")
